@@ -26,7 +26,7 @@ const Information = () => {
       <div class="card-footer"> -m
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
-      <div class="card-footer">
+      <div class="cardkking-footer">
         <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
