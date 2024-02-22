@@ -23,15 +23,7 @@ const Information = () => {
         <h5 class="card-title">What are the warning signs for child sexual abuse?</h5>
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">Contribute / Vo</h5>
+      <div class="card-footer"> -m
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
       <div class="card-footer">
