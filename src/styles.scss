@@ -1,0 +1,36 @@
+// Import Bootstrap first
+
+
+
+// Define custom variables
+$primary: #8dc5e4;
+$secondary: #ffcccc;
+$success: #d1d1e0;
+$info: #b2d8b2;
+$warning: #DFDFDF;
+
+$gradient-colors: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+
+:root, .navbar, .womenz{
+  background-image: $gradient-colors;
+  color: dark;
+}
+
+
+
+
+.carousel-inner {
+  height: 10%; /* Set the desired height for the banner */
+}
+
+.carousel-item img {
+  width: 100%; /* Ensure the image covers the entire width */
+  height: 100%; /* Ensure the image covers the entire height */
+  object-fit: cover; /* Maintain aspect ratio while covering */
+}
+
+
+
+
+@import '/node_modules/bootstrap';
+@import '/node_modules/bootstrap/scss/variables';
