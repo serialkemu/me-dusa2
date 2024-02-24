@@ -11,7 +11,7 @@ import Help from './pages/Help';
 
 const App = () => {
   return (
-      <div className='bg-primary'>
+      <div className='bg-transparent'>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home/>} />
