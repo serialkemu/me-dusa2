@@ -5,6 +5,7 @@ import WitnessForm from '../components/WitnessForm';
 import witness from '../assets/images/witness.png';
 import man from '../assets/images/man.png';
 import mobileMap from '../assets/images/mobileMap.png';
+import ReportCard from '../components/ReportCard';
 
 const Report = () => {
   // State to manage the active page
@@ -31,7 +32,28 @@ const Report = () => {
 
   return (
     <div className='womenz'>
-      <h3 className='text-center'>Your safety is our concern</h3>
+      <div className='mb-3 col-12' >
+      <h3 className='text-center mb-3'>Your safety is our concern</h3>
+      </div>
+      <div>
+      <div>
+      <div class="card mb-3 position-sticky top-0 start-50 translate-middle" style={{width: "35rem"}}>
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid text-center rounded-start" alt="..."/>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+      </div>
+
       <div className=''>
         <div className="card mb-3" style={{ maxWidth: "540px" }}>
           <div className="row g-0 bg-secondary">

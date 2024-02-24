@@ -1,13 +1,19 @@
 import React from 'react'
-import LocationPart from '../components/LocationPart'
-import AssistanceRequest from '../components/AssistanceRequest'
+import Victim from '../components/Victim'
+import Admin from './Admin'
+
 
 const Counselling = () => {
-conts 
+
+  const [formData, setFormData] = useState({});
+
+  const handleFormSubmit = (data) => {
+    setFormData(data);}
+
   return (
     <div>
-      <h1>Counselling</h1>
-      <AssistanceRequest />
+      <Victim onSubmit={handleFormSubmit} />
+      <Admin formData={formData} />
     </div>
   )
 }

@@ -8,9 +8,9 @@ const Information = () => {
   <div class="col">
     <div class="card h-100">
 
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <div class="card-body">
+        <h5 class="card-title">What are the warning signs for Physical abuse?</h5>
+        <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
       <div class="card-footer">
         <small class="text-muted">Last updated 3 mins ago</small>
@@ -20,13 +20,21 @@ const Information = () => {
   <div class="col">
     <div class="card h-100">
       <div class="card-body">
-        <h5 class="card-title">What are the warning signs for child sexual abuse?</h5>
+        <h5 class="card-title">What are the warning signs for Physical abuse?</h5>
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
-      <div class="card-footer"> -m
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Contribute / Volunteer</h5>
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
-      <div class="cardkking-footer">
+      <div class="card-footer">
         <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>

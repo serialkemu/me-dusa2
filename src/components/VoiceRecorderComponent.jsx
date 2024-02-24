@@ -1,60 +1,58 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
-const VoiceRecorderComponent = () => {
+const AudioRecorder = () => {
   const [isRecording, setIsRecording] = useState(false);
-  const [mediaRecorder, setMediaRecorder] = useState(null);
-  const [recordedChunks, setRecordedChunks] = useState([]);
-  const audioRef = useRef();
+  const [audioStream, setAudioStream] = useState(null);
+  const [audioChunks, setAudioChunks] = useState([]);
 
   const startRecording = async () => {
     try {
-      // Request access to the microphone
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      audioRef.current.srcObject = stream;
-
-      // Initialize MediaRecorder
-      const recorder = new MediaRecorder(stream);
-      recorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
-          setRecordedChunks((prev) => [...prev, event.data]);
-        }
-      };
-      recorder.start();
-      setMediaRecorder(recorder);
+      setAudioStream(stream);
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.addEventListener('dataavailable', handleDataAvailable);
+      mediaRecorder.start();
       setIsRecording(true);
     } catch (error) {
-      console.error('Error accessing media devices:', error);
+      console.error('Error accessing microphone:', error);
     }
   };
 
   const stopRecording = () => {
-    mediaRecorder.stop();
-    audioRef.current.srcObject.getTracks().forEach(track => track.stop());
+    audioStream.getTracks().forEach(track => track.stop());
     setIsRecording(false);
-    // Prepare the recorded chunks for download
-    const blob = new Blob(recordedChunks, { type: 'audio/wav' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'recording.wav';
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-    document.body.removeChild(a);
+  };
+
+  const handleDataAvailable = (event) => {
+    setAudioChunks([...audioChunks, event.data]);
+  };
+
+  const downloadRecording = () => {
+    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+    const url = URL.createObjectURL(audioBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'recording.wav';
+    document.body.appendChild(link);
+    link.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
     <div>
-      <audio ref={audioRef} controls style={{ width: '300px' }}></audio>
+      <h1>Audio Recorder</h1>
       <div>
         {isRecording ? (
           <button onClick={stopRecording}>Stop Recording</button>
         ) : (
           <button onClick={startRecording}>Start Recording</button>
         )}
+        {audioChunks.length > 0 && (
+          <button onClick={downloadRecording}>Download Recording</button>
+        )}
       </div>
     </div>
   );
 };
 
-export default VoiceRecorderComponent;
+export default AudioRecorder;
