@@ -29,7 +29,11 @@ const Information = () => {
     </div>
   </div>
   <div class="col">
+<<<<<<< HEAD
     <div class="card h-100 bg-success">
+=======
+    <div class="card h-100">
+>>>>>>> f10dd2f (	new file:   src/components/Edu.jsx)
       <div class="card-body">
         <h5 class="card-title">Contribute / Volunteer</h5>
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>

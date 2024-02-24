@@ -3,54 +3,19 @@ import React from 'react';
 
 const Admin = ({ formData }) => {
   const { abuserName, location } = formData;
+<<<<<<< HEAD
 // VictimForm component
 const VictimForm = ({ onSubmit }) => {
   const [victimName, setVictimName] = useState('');
   const [abuserName, setAbuserName] = useState('');
   const [location, setLocation] = useState('');
   const [urgency, setUrgency] = useState('');
+=======
+>>>>>>> f10dd2f (	new file:   src/components/Edu.jsx)
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Pass the form data to the parent component
-    onSubmit({ victimName, abuserName, location, urgency });
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Victim's Name"
-        value={victimName}
-        onChange={(e) => setVictimName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Abuser's Name"
-        value={abuserName}
-        onChange={(e) => setAbuserName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Location"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Urgency"
-        value={urgency}
-        onChange={(e) => setUrgency(e.target.value)}
-      />
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
-
-// Admin component
-const Admin = ({ victimName, abuserName, location, urgency }) => {
   return (
     <div>
+<<<<<<< HEAD
       <h3 className='text-center mt-3 pd-3 display-3'>ADMIN</h3>
       <div>
         <dl>
@@ -87,10 +52,17 @@ const Admin = ({ victimName, abuserName, location, urgency }) => {
           <dd>any media evidence</dd>
         </dl>
       </div>
+=======
+      <h3>Admin Page</h3>
+      <p>Abuser's Name: {abuserName}</p>
+      <p>Location: {location}</p>
+      {/* Add more fields as needed */}
+>>>>>>> 8fb0019 (	new file:   src/components/Edu.jsx)
     </div>
   );
 };
 
+<<<<<<< HEAD
 // Parent component
 const ParentComponent = () => {
   // State to store form data
@@ -112,4 +84,6 @@ const ParentComponent = () => {
 };
 }
 
+=======
+>>>>>>> f10dd2f (	new file:   src/components/Edu.jsx)
 export default Admin;
