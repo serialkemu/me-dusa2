@@ -3,19 +3,9 @@ import React from 'react';
 
 const Admin = ({ formData }) => {
   const { abuserName, location } = formData;
-<<<<<<< HEAD
-// VictimForm component
-const VictimForm = ({ onSubmit }) => {
-  const [victimName, setVictimName] = useState('');
-  const [abuserName, setAbuserName] = useState('');
-  const [location, setLocation] = useState('');
-  const [urgency, setUrgency] = useState('');
-=======
->>>>>>> f10dd2f (	new file:   src/components/Edu.jsx)
 
   return (
     <div>
-<<<<<<< HEAD
       <h3 className='text-center mt-3 pd-3 display-3'>ADMIN</h3>
       <div>
         <dl>
@@ -52,17 +42,10 @@ const VictimForm = ({ onSubmit }) => {
           <dd>any media evidence</dd>
         </dl>
       </div>
-=======
-      <h3>Admin Page</h3>
-      <p>Abuser's Name: {abuserName}</p>
-      <p>Location: {location}</p>
-      {/* Add more fields as needed */}
->>>>>>> 8fb0019 (	new file:   src/components/Edu.jsx)
     </div>
   );
 };
 
-<<<<<<< HEAD
 // Parent component
 const ParentComponent = () => {
   // State to store form data
@@ -82,8 +65,5 @@ const ParentComponent = () => {
     </div>
   );
 };
-}
 
-=======
->>>>>>> f10dd2f (	new file:   src/components/Edu.jsx)
 export default Admin;
