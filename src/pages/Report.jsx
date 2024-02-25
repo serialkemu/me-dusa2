@@ -33,7 +33,7 @@ const Report = () => {
   return (
     <div className='womenz'>
       <div className='mb-3 col-12' >
-      <h3 className='text-center mb-3'>eliuds safety is our concern</h3>
+      <h3 className='text-center mb-3'>Eliuds safety is our concern</h3>
       </div>
      
       <div class="card mb-3 align-middle " style={{width: "35rem"}}>
