@@ -35,9 +35,8 @@ const Report = () => {
       <div className='mb-3 col-12' >
       <h3 className='text-center mb-3'>Your safety is our concern</h3>
       </div>
-      <div>
-      <div>
-      <div class="card mb-3 position-sticky top-0 start-50 translate-middle" style={{width: "35rem"}}>
+     
+      <div class="card mb-3 align-middle " style={{width: "35rem"}}>
   <div class="row g-0">
     <div class="col-md-4">
       <img src="..." class="img-fluid text-center rounded-start" alt="..."/>
@@ -51,8 +50,8 @@ const Report = () => {
     </div>
   </div>
 </div>
-      </div>
-      </div>
+      
+      
 
       <div className=''>
         <div className="card mb-3" style={{ maxWidth: "540px" }}>

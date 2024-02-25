@@ -33,7 +33,7 @@ const NavBar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
-              <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{ "--bs-scroll-height": "100px" }}>
+              <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{ "--bs-scroll-height": "7rem" }}>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/"><Link className='link-dark fw-bold text-decoration-none' to="/">Home</Link></a>
                 </li>
