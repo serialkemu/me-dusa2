@@ -1,5 +1,5 @@
 import React from 'react'
-import LocationPart from '../components/LocationPart'
+
 import AssistanceRequest from '../components/AssistanceRequest'
 
 const Counselling = () => {
@@ -12,4 +12,4 @@ conts
   )
 }
 
-export default Counselling
+export default Counselling;

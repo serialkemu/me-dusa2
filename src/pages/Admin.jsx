@@ -77,9 +77,7 @@ const Admin = ({ victimName, abuserName, location, urgency }) => {
           <dt>Live Location</dt>
           <dd>
             {/* Customized div to display map with directions */}
-            <div className="map-container">
-              {/* Your map component or iframe with directions here */}
-            </div>
+            <div className="map-container"></div>
           </dd>
 
           <dt>Additional evidence</dt>
