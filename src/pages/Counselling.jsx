@@ -1,7 +1,6 @@
 import React from 'react'
-import Victim from '../components/Victim'
-import Admin from './Admin'
 
+import AssistanceRequest from '../components/AssistanceRequest'
 
 const Counselling = () => {
 
@@ -18,4 +17,4 @@ const Counselling = () => {
   )
 }
 
-export default Counselling
+export default Counselling;
