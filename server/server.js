@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 // const authRouter = require('./Routes/authRouter');
-// const userRouter = require('./Routes/userRouter');
+const casesRouter = require('./Routes/casesRouter');
 // const requestRouter = require('./Routes/requestRouter');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -30,7 +30,7 @@ const server = app.listen(PORT, () => {
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use('/users',authRouter, userRouter);
+app.use('/cases', casesRouter);
 // app.use('/requests', requestRouter)
 // app.use('/images', express.static(path.join(__dirname, 'images')));
 //last route for all other url routes 
