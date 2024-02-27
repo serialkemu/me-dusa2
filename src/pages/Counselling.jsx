@@ -3,11 +3,16 @@ import React from 'react'
 import AssistanceRequest from '../components/AssistanceRequest'
 
 const Counselling = () => {
-conts 
+
+  const [formData, setFormData] = useState({});
+
+  const handleFormSubmit = (data) => {
+    setFormData(data);}
+
   return (
     <div>
-      <h1>Counselling</h1>
-      <AssistanceRequest />
+      <Victim onSubmit={handleFormSubmit} />
+      <Admin formData={formData} />
     </div>
   )
 }

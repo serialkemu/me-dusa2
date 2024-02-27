@@ -1,51 +1,9 @@
-import React, { useState } from 'react';
+// AdminPage.js
+import React from 'react';
 
-// VictimForm component
-const VictimForm = ({ onSubmit }) => {
-  const [victimName, setVictimName] = useState('');
-  const [abuserName, setAbuserName] = useState('');
-  const [location, setLocation] = useState('');
-  const [urgency, setUrgency] = useState('');
+const Admin = ({ formData }) => {
+  const { abuserName, location } = formData;
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Pass the form data to the parent component
-    onSubmit({ victimName, abuserName, location, urgency });
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Victim's Name"
-        value={victimName}
-        onChange={(e) => setVictimName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Abuser's Name"
-        value={abuserName}
-        onChange={(e) => setAbuserName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Location"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Urgency"
-        value={urgency}
-        onChange={(e) => setUrgency(e.target.value)}
-      />
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
-
-// Admin component
-const Admin = ({ victimName, abuserName, location, urgency }) => {
   return (
     <div>
       <h3 className='text-center mt-3 pd-3 display-3'>ADMIN</h3>
@@ -100,10 +58,12 @@ const ParentComponent = () => {
 
   return (
     <div>
-      <VictimForm onSubmit={handleFormSubmit} />
-      <Admin {...formData} />
+      <h3>Admin Page</h3>
+      <p>Abuser's Name: {abuserName}</p>
+      <p>Location: {location}</p>
+      {/* Add more fields as needed */}
     </div>
   );
 };
 
-export default ParentComponent;
+export default Admin;

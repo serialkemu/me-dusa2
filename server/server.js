@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 // const authRouter = require('./Routes/authRouter');
 const casesRouter = require('./Routes/casesRouter');
 // const requestRouter = require('./Routes/requestRouter');
+
+
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const CustomError = require('./Utils/customError');
@@ -31,6 +33,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/cases', casesRouter);
+// app.use('/users',authRouter, userRouter);
 // app.use('/requests', requestRouter)
 // app.use('/images', express.static(path.join(__dirname, 'images')));
 //last route for all other url routes 

@@ -1,5 +1,6 @@
 import React from 'react'
-import MediaRecorderComponent from './MediaRecordingComponent'
+import MediaRecorderComponent from './MediaRecordingComponent';
+import RangeInput from './RangeInput';
 
 const WitnessForm = () => {
   return (
@@ -23,8 +24,9 @@ const WitnessForm = () => {
           <span class="input-group-text" id="inputGroup-sizing-default">Type of abuse:</span>
           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
           </div>
-          <label for="customRange3" class="form-label">Urgency</label>
-          <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"></input>
+          <div>
+            
+          </div>
         </div>
       </form>
       <div class="mb-3">

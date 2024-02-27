@@ -5,6 +5,8 @@ import WitnessForm from '../components/WitnessForm';
 import witness from '../assets/images/witness.png';
 import man from '../assets/images/man.png';
 import mobileMap from '../assets/images/mobileMap.png';
+import ReportCard from '../components/ReportCard';
+
 
 const Report = () => {
   // State to manage the active page
