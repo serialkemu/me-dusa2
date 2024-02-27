@@ -13,18 +13,10 @@ const Home = () => {
         <div className='mb-3'>
         <Carousel/>
         </div>
-<<<<<<< HEAD
         <div  className='mb-3 row bg-warning rounded-end p-3'>
           <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
-=======
-<<<<<<< HEAD
-        <div  className='mb-3 row bg-info'>
-          <div className='col-4'><h2>MUT SGBV Hotline Free of Charge Confidnetial.24/7. </h2> </div> 
-=======
         <div  className='mb-3 row bg-warning rounded-end p-3'>
           <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
->>>>>>> 4d675b7 (	new file:   src/components/Edu.jsx)
->>>>>>> f10dd2f (	new file:   src/components/Edu.jsx)
           <div className='col-4 text-center mt-5'>
             <button className='btn btn-secondary'>Call <a href='0800724635' className='text-dark'>0800724635</a> toll free</button>
             </div> 
@@ -79,7 +71,7 @@ const Home = () => {
               <Information/>
         </div>
 
-       
+       </div>
     </div>
   )
 }
