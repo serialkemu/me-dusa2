@@ -8,6 +8,9 @@ import Education from './pages/Education';
 import Counselling from './pages/Counselling';
 import Statistics from './pages/Statistics';
 import Help from './pages/Help';
+import LiveReport from './components/LiveReport';
+import Victim from './components/Victim'
+import WitnessForm from './components/WitnessForm';
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/Report" element={<Report/>} />
+          <Route path='/LiveReport' element={<LiveReport/>}/>
+          <Route path='/Victim' element={<Victim/>}/>
+          <Route path='/WitnessForm' element={<WitnessForm/>}/>
           <Route path="/Education" element={<Education/>} />
           <Route path="/Counselling" element={<Counselling/>} />
           <Route path="/Statistics" element={<Statistics/>} />

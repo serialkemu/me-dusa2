@@ -40,15 +40,16 @@ const AudioRecorder = () => {
 
   return (
     <div>
-      <h1>Audio Recorder</h1>
+      <h4>Audio Recorder</h4>
+      <p>Tell using your own words</p>
       <div>
         {isRecording ? (
-          <button onClick={stopRecording}>Stop Recording</button>
+          <button onClick={stopRecording} className='btn btn-info'>Stop Recording</button>
         ) : (
-          <button onClick={startRecording}>Start Recording</button>
+          <button onClick={startRecording} className='btn btn-info'>Start Recording</button>
         )}
         {audioChunks.length > 0 && (
-          <button onClick={downloadRecording}>Download Recording</button>
+          <button onClick={downloadRecording} className='btn btn-info'>Download Recording</button>
         )}
       </div>
     </div>

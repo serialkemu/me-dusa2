@@ -7,10 +7,10 @@ const WitnessCase = require('../Models/witnessCaseModel')
 // Endpoint to add victims case
 exports.victimCaseEndpoint= asyncErrorHandler (async (req, res) => {
   try {
-    const { userName, typeOfAbuse, location, storyText, storyVideo, storyAudio, mediaEvidence } = req.body;
+    const { abuserName, typeOfAbuse, location, storyText, storyVideo, storyAudio, mediaEvidence } = req.body;
 
     const victimCase = await VictimCase.create({
-      userName,
+      abuserName,
       typeOfAbuse,
       location,
       storyText,

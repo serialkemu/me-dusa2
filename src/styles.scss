@@ -30,6 +30,25 @@ $gradient-colors: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb
   object-fit: cover; /* Maintain aspect ratio while covering */
 }
 
+.video-container {
+  position: relative;
+
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the video is on top */
+  }
+
+  .button-container {
+    margin-top: 20px;
+  }
+}
 
 
 

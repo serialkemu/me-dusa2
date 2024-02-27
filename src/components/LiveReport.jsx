@@ -1,6 +1,6 @@
 import React from 'react'
-import MediaRecorderComponent from './MediaRecordingComponent';
-import VoiceRecorderComponent from './VoiceRecorderComponent';
+import MediaRecorderComponent from './VideoMedia';
+import VoiceRecorderComponent from './VoiceRecorder';
 
 const LiveReport = () => {
   return (

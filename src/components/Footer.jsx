@@ -8,27 +8,23 @@ const Footer = () => {
     <div className="bg-transparent row flex">
       <div className=''>
         <p  className='' >&copy; serialkemu. All rights reserved.</p>
-
-      </div>
-    <div className='text-center'>
-      <p>Socials</p>
-    <div className=''>
+      </div> 
+    <div className='p-4 row'>
+      <p>Socials</p> 
+    <div className='col'>
       <a href=''>
-      <img src={twitter} alt="" style={{height:"1rem"}} />
+      <img src={twitter} alt="..l" style={{height:"2rem"}} />
       </a> 
       </div>
-      <div>
-      <a href=''><img src={instagram} alt="" style={{height:"1rem"}} />
+      <div className='col'>
+      <a href=''><img src={instagram} alt="" style={{height:"2rem"}} />
       </a>
       </div>
-      <div>
-      <a href=''><img src={linkedin} alt="" style={{height:"1rem"}} />
+      <div className='col'>
+      <a href=''><img src={linkedin} alt="" style={{height:"2rem"}} />
       </a>
       </div>
-      <div>
-      <a href=''><img src={twitter} alt="" style={{height:"1rem"}} />
-      </a>
-      </div>
+
     </div>
        
      
