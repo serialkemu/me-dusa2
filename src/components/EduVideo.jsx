@@ -1,8 +1,18 @@
 import React from 'react'
 
+const EduVi = () =>{
+  return(
+    <div>
+
+    </div>
+  )
+}
+
 const EduVideo = () => {
   return (
-    <div>EduVideo</div>
+    <div>
+
+    </div>
   )
 }
 

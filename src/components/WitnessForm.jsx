@@ -2,14 +2,14 @@ import React from 'react'
 import MediaRecorderComponent from './VideoMedia';
 import RangeInput from './RangeInput';
 import VideoMedia from '../components/VideoMedia'
-import VoiceRecorder from '../components/VoiceRecorder'
+import VoiceRecorder from './AudioRecorder'
 
 
 const WitnessForm = () => {
   return (
     <div className='container p-4'>
       <div>
-        <h3 className='text-center mb-3'> WitnessForm</h3>
+        <h3 className='text-center mb-3'> Witness Form</h3>
       </div>
       <form className='row g-3'>
         <div>

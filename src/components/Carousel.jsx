@@ -6,7 +6,7 @@ import car3 from '../assets/images/car3.jpeg';
 const Carousel = () => {
   return (
     <div className=''>
-      <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="300">
+      <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={car2} className="d-block w-100" alt="stop sgbv" style={{ objectFit: 'cover', width: '100%', height: '31.25rem' }} />

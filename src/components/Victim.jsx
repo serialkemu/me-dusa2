@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import VoiceRecorderComponent from './VoiceRecorder';
+import VoiceRecorderComponent from './AudioRecorder';
 import VideoMedia from './VideoMedia';
 
 const VictimForm = ({ onSubmit }) => {
@@ -60,8 +60,8 @@ const VictimForm = ({ onSubmit }) => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='container'>
+      <form onSubmit={handleSubmit} className='m-3 p-4'>
         <div className="input-group mb-3">
           <span className="input-group-text" id="abuserName">Abuser's name</span>
           <input type="text" name="abuserName" className="form-control" placeholder="" aria-label="abuserName" value={formData.abuserName} onChange={handleChange} aria-describedby="basic-addon1" />
@@ -72,22 +72,23 @@ const VictimForm = ({ onSubmit }) => {
         </div>
         <div>
           <h4 className="text-center">Tell your Story In Anyway you want</h4>
+          <hr/>
         </div>
         <div className="input-group mb-3">
           <span className="input-group-text" id="basic-addon1">Tell your your story</span>
           <textarea name="storyText" className="form-control" aria-label="With textarea" value={formData.storyText} onChange={handleChange}></textarea>
         </div>
-        <div>
+        <div className='' >
           <VoiceRecorderComponent onChange={handleFileChange} />
         </div>
         <div>
           <VideoMedia onRecordingComplete={handleRecordingComplete} />
         </div>
-        <div className="input-group mb-3">
+        <div className="input-group mt-3">
           <label className="input-group-text" htmlFor="inputGroupFile01">Upload any media evidence</label>
           <input type="file" name="mediaEvidence" className="form-control" id="inputGroupFile01" onChange={handleFileChange} />
         </div>
-        <button type="submit">Submit</button>
+        <button className='btn btn-success mt-2' type="submit">Submit</button>
       </form>
     </div>
   );

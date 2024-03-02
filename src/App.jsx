@@ -11,6 +11,9 @@ import Help from './pages/Help';
 import LiveReport from './components/LiveReport';
 import Victim from './components/Victim'
 import WitnessForm from './components/WitnessForm';
+import Edu from './components/Edu';
+import EduVideo from './components/EduVideo';
+import Admin from './pages/Admin';
 
 const App = () => {
   return (
@@ -23,8 +26,11 @@ const App = () => {
           <Route path='/Victim' element={<Victim/>}/>
           <Route path='/WitnessForm' element={<WitnessForm/>}/>
           <Route path="/Education" element={<Education/>} />
+          <Route path='/Edu' element={<Edu/>} ></Route>
+          <Route path='/EduVideo' element={<EduVideo/>} ></Route>
           <Route path="/Counselling" element={<Counselling/>} />
           <Route path="/Statistics" element={<Statistics/>} />
+          <Route path='/Admin' element={<Admin/>}/>
           <Route path="/Help" element={<Help/>} />
         </Routes>
         <Footer />

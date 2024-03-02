@@ -10,6 +10,15 @@ const Information = () => {
 
     <div class="card-body">
         <h5 class="card-title">What are the warning signs for Physical abuse?</h5>
+        <p>
+        Insults, Name-Calling, and Put-Downs
+        </p>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    The current link item
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+</div>
         <button className="card-text btn btn-secondary"><a>READ MORE</a></button>
       </div>
       <div class="card-footer">

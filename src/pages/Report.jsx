@@ -11,9 +11,10 @@ import ReportCard from '../components/ReportCard';
 const Report = () => {
   return (
     
-      <div className='womenz'>
+      <div className='womenz container m-3 '>
         <h3 className='text-center'>Your safety is our concern</h3>
-        <div className="card mb-3" style={{ maxWidth: "540px" }}>
+        <div className="p-5 bg-primary text-center">
+        <div className="card mb-3 " style={{ maxWidth: "540px" }}>
           <div className="row g-0 bg-secondary">
             <div className="col-md-4">
               <img src={mobileMap} className="img-fluid rounded-start" alt="..." />
@@ -54,6 +55,7 @@ const Report = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
    
