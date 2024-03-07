@@ -1,5 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+// const authRouter = require('./Routes/authRouter');
+const casesRouter = require('./Routes/casesRouter');
+// const requestRouter = require('./Routes/requestRouter');
 
 
 const bodyParser = require('body-parser');
@@ -29,6 +32,7 @@ const server = app.listen(PORT, () => {
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use('/cases', casesRouter);
 // app.use('/users',authRouter, userRouter);
 // app.use('/requests', requestRouter)
 // app.use('/images', express.static(path.join(__dirname, 'images')));

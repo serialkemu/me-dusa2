@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import user from '../assets/images/user.png'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +55,10 @@ const NavBar = () => {
                   <a className="nav-link"><Link to="/help" className='link-dark fw-bold text-decoration-none'>Help</Link></a>
                 </li>
               </ul>
+              <div>
+              <Link  to="./Admin"><img src={user} style={{height:"1.9rem"}}/></Link>
+              </div>
+             
               <form className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button className="btn btn-outline-dark" type="submit">Search</button>

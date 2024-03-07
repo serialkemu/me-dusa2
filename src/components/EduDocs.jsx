@@ -2,7 +2,17 @@ import React from 'react'
 
 const EduDocs = () => {
   return (
-    <div>EduDocs</div>
+    <div>
+      <div className="text-center">
+        <h3>SGBV Documents</h3>
+      </div>
+      <div className="m-2">
+        <div>
+          
+        </div>
+      </div>
+
+    </div>
   )
 }
 

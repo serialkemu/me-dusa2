@@ -1,12 +1,14 @@
 import React from 'react'
-import Admin from "./Admin"
+
 
 const Help = () => {
   return (
     <div>
-      <h1></h1>
+     <h2>Help</h2>
+     <div>
+      
+     </div>
     </div>
-    
   )
 }
 

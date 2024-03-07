@@ -8,6 +8,12 @@ import Education from './pages/Education';
 import Counselling from './pages/Counselling';
 import Statistics from './pages/Statistics';
 import Help from './pages/Help';
+import LiveReport from './components/LiveReport';
+import Victim from './components/Victim'
+import WitnessForm from './components/WitnessForm';
+import Edu from './components/Edu';
+import EduVideo from './components/EduVideo';
+import Admin from './admin/Admin';
 
 const App = () => {
   return (
@@ -16,9 +22,15 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/Report" element={<Report/>} />
+          <Route path='/LiveReport' element={<LiveReport/>}/>
+          <Route path='/Victim' element={<Victim/>}/>
+          <Route path='/WitnessForm' element={<WitnessForm/>}/>
           <Route path="/Education" element={<Education/>} />
+          <Route path='/Edu' element={<Edu/>} ></Route>
+          <Route path='/EduVideo' element={<EduVideo/>} ></Route>
           <Route path="/Counselling" element={<Counselling/>} />
           <Route path="/Statistics" element={<Statistics/>} />
+          <Route path='/Admin' element={<Admin/>}/>
           <Route path="/Help" element={<Help/>} />
         </Routes>
         <Footer />
