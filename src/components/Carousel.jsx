@@ -3,6 +3,17 @@ import car1 from '../assets/images/car1.jpeg';
 import car2 from '../assets/images/car2.jpeg';
 import car3 from '../assets/images/car3.jpeg';
 
+ const Caro = ({}) =>{
+  return(
+    <div>
+
+    </div>
+  )
+ }
+
+
+
+
 const Carousel = () => {
   return (
     <div className=''>

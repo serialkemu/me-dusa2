@@ -60,13 +60,16 @@ const VictimForm = ({ onSubmit }) => {
   }
 
   return (
-    <div className='container'>
+    <div className='container bg-success p-5 m-3'>
+      <div>
+        <h3 className="text-center">Victim's Reporting Form</h3>
+      </div>
       <form onSubmit={handleSubmit} className='m-3 p-4'>
         <div className="input-group mb-3">
           <span className="input-group-text" id="abuserName">Abuser's name</span>
           <input type="text" name="abuserName" className="form-control" placeholder="" aria-label="abuserName" value={formData.abuserName} onChange={handleChange} aria-describedby="basic-addon1" />
         </div>
-        <div className="input-group mb-3">
+        <div className="input-group mb-3 ">
           <span className="input-group-text" id="sgbvLocation">Location it took place</span>
           <input type="text" name="location" className="form-control" placeholder="Location" aria-label="sgbvLocation" value={formData.location} onChange={handleChange} aria-describedby="basic-addon1" />
         </div>
@@ -78,17 +81,17 @@ const VictimForm = ({ onSubmit }) => {
           <span className="input-group-text" id="basic-addon1">Tell your your story</span>
           <textarea name="storyText" className="form-control" aria-label="With textarea" value={formData.storyText} onChange={handleChange}></textarea>
         </div>
-        <div className='' >
+        <div className='border border-2 m-2' >
           <VoiceRecorderComponent onChange={handleFileChange} />
         </div>
-        <div>
+        <div className='border border-2 m-2'>
           <VideoMedia onRecordingComplete={handleRecordingComplete} />
         </div>
         <div className="input-group mt-3">
           <label className="input-group-text" htmlFor="inputGroupFile01">Upload any media evidence</label>
           <input type="file" name="mediaEvidence" className="form-control" id="inputGroupFile01" onChange={handleFileChange} />
         </div>
-        <button className='btn btn-success mt-2' type="submit">Submit</button>
+        <button className='btn btn-secondary mt-2' type="submit">Submit</button>
       </form>
     </div>
   );

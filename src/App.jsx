@@ -13,7 +13,7 @@ import Victim from './components/Victim'
 import WitnessForm from './components/WitnessForm';
 import Edu from './components/Edu';
 import EduVideo from './components/EduVideo';
-import Admin from './pages/Admin';
+import Admin from './admin/Admin';
 
 const App = () => {
   return (
