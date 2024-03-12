@@ -1,22 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Login = () => {
+const LoginForm = ({ onLogin }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform validation if needed
+    // Here, you can send the login data to your backend API
+    onLogin({ username, password });
+  };
+
   return (
-    <div  className='position-absolute top-50 start-50 translate-middle bg-opacity-25'>
-        <h3 className=''>Login</h3>
-    <div className='contianer user-box'>
-       <div className="mb-3">
-            <label htmlFor="admission" className="form-label">Registration Number</label>
-            <input type="email" className="form-control" id="admission" placeholder="sc232/1461/2020"/>
-            </div>
-        </div>
-        <div className="mb-3">
-            <label htmlFor="pasword" className="form-label">password</label>
-            <input type="password" className="form-control" id="password" placeholder="***"/>
-            </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button type="submit">Login</button>
+    </form>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Login
+export default LoginForm;

@@ -28,6 +28,7 @@ const Information = () => {
           <Info carTitle='warning signs of sgbv' cardis=''/>
           <Info carTitle='Laws on SGBV' cardis=''/>
           <Info carTitle='Statistics on SGBV' cardis='Over 40% of women in Kenya have experienced physical or sexual violence from an intimate partner in their lifetime, according to the Kenya Demographic and Health Survey (KDHS)'/>
+          <Info carTitle='' cardis='' />
  
 
           </div>

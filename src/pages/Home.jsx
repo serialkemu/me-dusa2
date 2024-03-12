@@ -14,6 +14,7 @@ import donation from '../assets/images/donation.gif'
 import volunteering from '../assets/images/volunteering.gif'
 import callService from '../assets/images/callService.gif'
 import policy from '../assets/images/policy.gif'
+import muscle from '../assets/images/muscle.gif'
 
 const HomeMid = ({iconMid, titleMid,desMid,refMid}) => {
   return(
@@ -56,10 +57,10 @@ const Home = () => {
         <div  className='mb-3 row  rounded-end p-3'>
           <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
           <div className='col-4 text-center mt-5'>
-            <button className='btn btn-secondary p-4 '><p className="h4">call <Link href='0800724635' className='text-dark'>0800724635</Link> </p>toll free</button>
+            <button className='btn btn-secondary  '><p className="h4"><Link href='0800724635' className='text-dark'>0800724635</Link> </p> call toll free</button>
             </div> 
             <div className='col-4 text-center mt-5 '> 
-              <button className='btn btn-secondary p-4'><p className='h4'><Link to="/report" className='text-dark'>Get Help</Link></p> </button>
+              <button className='btn btn-secondary p-3'><p className='h4'><Link to="/report" className='text-dark'>Get Help</Link></p> </button>
               </div>    
         </div>
         </div>
@@ -68,7 +69,7 @@ const Home = () => {
         <HomeMid iconMid={classroom} titleMid={'Education'} desMid={'lorem'} refMid='/Education' />
         <HomeMid iconMid={diagram} titleMid={'statistics'} desMid={''} refMid='/statistics'/>
         <HomeMid iconMid={ethics} titleMid={'Ethics'} desMid={''}/>
-        <HomeMid iconMid={diagram} titleMid={'Survivor Stories'} desMid={''}/>
+        <HomeMid iconMid={muscle} titleMid={'Survivor Stories'} desMid={''}/>
         </div>
         </div>
 
