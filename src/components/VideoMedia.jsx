@@ -1,64 +1,92 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import Webcam from 'react-webcam';
 
-const VideoMedia = ({ onSave }) => {
+const VideoMedia = () => {
+  const webcamRef = useRef(null);
   const [isRecording, setIsRecording] = useState(false);
-  const [mediaRecorder, setMediaRecorder] = useState(null);
+  const [videoRecorder, setVideoRecorder] = useState(null);
   const [recordedChunks, setRecordedChunks] = useState([]);
-  const videoRef = useRef();
+  const [recordedVideoUrl, setRecordedVideoUrl] = useState(null);
+  const [error, setError] = useState(null);
 
   const startRecording = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      videoRef.current.srcObject = stream;
-      videoRef.current.play();
+      const options = { mimeType: 'video/webm' };
+      const videoRecorder = new MediaRecorder(stream, options);
+      const chunks = [];
 
-      const recorder = new MediaRecorder(stream);
-      recorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
-          setRecordedChunks((prev) => [...prev, event.data]);
-        }
+      videoRecorder.ondataavailable = (event) => {
+        chunks.push(event.data);
       };
-      recorder.start();
-      setMediaRecorder(recorder);
+
+      videoRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        setRecordedVideoUrl(url);
+      };
+
+      videoRecorder.start();
       setIsRecording(true);
-    } catch (error) {
-      console.error('Error accessing media devices:', error);
+      setVideoRecorder(videoRecorder);
+    } catch (err) {
+      setError(err.message || 'Error accessing camera');
     }
   };
 
   const stopRecording = () => {
-    if (mediaRecorder) {
-      mediaRecorder.stop();
-      videoRef.current.srcObject.getTracks().forEach(track => track.stop());
-      setIsRecording(false);
-    }
+    videoRecorder.stop();
+    setIsRecording(false);
   };
 
-  const handleSave = () => {
-    const blob = new Blob(recordedChunks, { type: 'video/webm' });
-    onSave(blob); // Pass the recorded video to the parent component
-    setRecordedChunks([]); // Clear recorded chunks after saving
+  const handleReset = () => {
+    setRecordedChunks([]);
+    setRecordedVideoUrl(null);
+    setError(null); // Reset error state
+  };
+
+  const handleUpload = () => {
+    // Implement video upload logic here (e.g., using fetch API)
+    console.log('Implement video upload logic');
   };
 
   return (
-    <div className='video-container m-2'>
-      <div>You can record a video real quick</div>
-      <div className='video-wrapper'>
-        <video ref={videoRef} style={{ width: '300px' }} muted></video>
+    <div>
+      <div>
+        <h4>Video Recorder</h4>
+        <p>Show us what you see</p>
       </div>
-      <div className='button-container gap-2 p-3'>
-        {isRecording ? (
-          <button onClick={stopRecording} className='btn btn-secondary'>Stop Recording</button>
-        ) : (
-          <>
-            <button onClick={startRecording} className='btn btn-secondary'>Start Recording</button>
-            {recordedChunks.length > 0 && (
-              <button onClick={handlePreview} className='btn btn-secondary'>Preview</button>
-            )}
-          </>
-        )}
-        <button onClick={handleSave} disabled={recordedChunks.length === 0} className='btn btn-info'>Save Recording</button>
-      </div>
+      {error && <div>{error}</div>}
+      {recordedVideoUrl ? (
+        <div>
+          <video controls>
+            <source src={recordedVideoUrl} type="video/webm" />
+          </video>
+          <button onClick={handleReset} className='btn btn-info'>Record Again</button>
+          <button onClick={handleUpload} className='btn btn-info'>Upload Video</button>
+        </div> 
+      ) : (
+        <div>
+          {isRecording && (
+            <Webcam
+              audio={false}
+              ref={webcamRef}
+              mirrored={true}
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxWidth: '640px',
+              }}
+            />
+          )}
+          {!isRecording && !recordedVideoUrl && (
+            <button onClick={startRecording} className='btn btn-info'>Start Recording</button>
+          )}
+          {isRecording && (
+            <button onClick={stopRecording} className='btn btn-info'>Stop Recording</button>
+          )}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,20 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LiveReport from '../components/LiveReport';
-import Victim from '../components/Victim';
-import WitnessForm from '../components/WitnessForm';
+import ReportInfo from '../components/ReportInfo';
 import witness from '../assets/images/witness.png';
 import man from '../assets/images/man.png';
 import mobileMap from '../assets/images/mobileMap.png';
 import ReportCard from '../components/ReportCard';
 
+
 const Report = () => {
   return (
     
-      <div className='womenz container m-3  d-flex justify-content-center'>
+      <div className='womenz container m-3'>
+        <div className="text-center">
         <h3 className='text-center'>Your safety is our concern</h3>
-        <div className="p-5 text-center">
-        <div className="card mb-3 " style={{ maxWidth: "540px" }}>
+        </div>
+        
+        <div className=" d-flex justify-content-center">
+          <div className=" p-5 text-center col-8">
+          <div className="card mb-3 " style={{ maxWidth: "540px" }}>
           <div className="row g-0 bg-success">
             <div className="col-md-4">
               <img src={mobileMap} className="img-fluid rounded-start" alt="..." />
@@ -57,6 +60,13 @@ const Report = () => {
           </div>
         </div>
         </div>
+        <div className="col-4 border border-info">
+          <ReportInfo/>
+        </div>
+        </div>
+       
+        
+        
       </div>
    
   )

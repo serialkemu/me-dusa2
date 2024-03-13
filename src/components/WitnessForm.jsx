@@ -1,7 +1,6 @@
 import React from 'react'
-import MediaRecorderComponent from './VideoMedia';
 import RangeInput from './RangeInput';
-import VideoMedia from '../components/VideoMedia'
+
 import VoiceRecorder from './AudioRecorder'
 
 
@@ -44,7 +43,7 @@ const WitnessForm = () => {
           <VoiceRecorder/>
         </div>
       <div className=''>
-        <VideoMedia/>
+       
       </div>
      
       </form>

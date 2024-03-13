@@ -1,6 +1,6 @@
 import React from 'react'
 import Edu from '../components/Edu'
-import fraud from '../assets/images/fraud.png'
+import  growth from '../assets/images/growth.gif'
 import edu1 from '../assets/images/edu1.jpeg'
 import EduVideo from '../components/EduVideo'
 import { Link } from 'react-router-dom'
@@ -23,7 +23,7 @@ const Education = () => {
     </div>
     <div className="row g-0">
       <div className="col-md-3 col-sm-2">
-        <img src={edu1} className="img-fluid rounded-start" alt="..." />
+        <img src={growth} className="img-fluid rounded-start" alt="..." />
       </div>
       <div className="col-md-9 col-sm-10">
         <div className="card-body">

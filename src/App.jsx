@@ -13,7 +13,7 @@ import Victim from './components/Victim'
 import WitnessForm from './components/WitnessForm';
 import Edu from './components/Edu';
 import EduVideo from './components/EduVideo';
-import Admin from './admin/Admin';
+
 
 const App = () => {
   return (
@@ -30,7 +30,6 @@ const App = () => {
           <Route path='/EduVideo' element={<EduVideo/>} ></Route>
           <Route path="/Counselling" element={<Counselling/>} />
           <Route path="/Statistics" element={<Statistics/>} />
-          <Route path='/Admin' element={<Admin/>}/>
           <Route path="/Help" element={<Help/>} />
         </Routes>
         <Footer />

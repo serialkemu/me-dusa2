@@ -4,10 +4,10 @@ import Education from './Education'
 import Help from './Help' 
 import Cards from '../components/Cards';
 import Carousel from '../components/Carousel';
-import classroom from '../assets/images/classroom.gif'
-import data from '../assets/images/data.png';
-import diagram from '../assets/images/diagram.gif'
-import ethics from '../assets/images/ethics.png'
+import  book from '../assets/images/book.gif'
+import stats from '../assets/images/stats.gif'
+import law from '../assets/images/law.gif'
+import  survivor from  '../assets/images/survivor.gif'
 import Information from '../components/Information';
 import '../styles/home.css';
 import donation from '../assets/images/donation.gif'
@@ -50,8 +50,7 @@ const Home = () => {
   return (
     <div className='' >
         <Carousel className=""/>
-
-        <div  className='m-2  row rounded-end p-5 bg-success'>
+        <div  className='m-2  row rounded-end p-5 bg-info border rounded'>
           <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
         <div  className='mb-3 row  rounded-end p-3'>
           <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
@@ -65,10 +64,10 @@ const Home = () => {
         </div>
         <div className='d-flex justify-content-center'>
         <div  className='m-2 row p-5' style={{width:'100rem'}}>
-        <HomeMid iconMid={classroom} titleMid={'Education'} desMid={'lorem'} refMid='/Education' />
-        <HomeMid iconMid={diagram} titleMid={'statistics'} desMid={''} refMid='/statistics'/>
-        <HomeMid iconMid={ethics} titleMid={'Ethics'} desMid={''}/>
-        <HomeMid iconMid={diagram} titleMid={'Survivor Stories'} desMid={''}/>
+        <HomeMid iconMid={book} titleMid={'Education'} desMid={'lorem'} refMid='/Education' />
+        <HomeMid iconMid={stats} titleMid={'statistics'} desMid={''} refMid='/statistics'/>
+        <HomeMid iconMid={law} titleMid={'Advocacy'} desMid={''}/>
+        <HomeMid iconMid={survivor} titleMid={'Survivor Stories'} desMid={''}/>
         </div>
         </div>
 

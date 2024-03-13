@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-media-recorder": "^1.6.6",
-    "react-router-dom": "^6.22.1"
+    "react-router-dom": "^6.22.3",
+    "react-webcam": "^7.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
