@@ -50,17 +50,14 @@ const Home = () => {
   return (
     <div className='' >
         <Carousel className=""/>
-        <div  className='m-2  row rounded-end p-5 bg-info border rounded'>
-          <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
-        <div  className='mb-3 row  rounded-end p-3'>
-          <div className='col-4'><h2>MUT SGBV Hotline Free Confidnetial.24/7. </h2> </div> 
+        <div  className='m-2  row rounded-end p-5 bg-info border rounded'> 
+          <div className='col-4'><h2>MUT SGBV Hotline<br></br>24/7  Free</h2> </div> 
           <div className='col-4 text-center mt-5'>
             <button className='btn btn-secondary p-4 '><p className="h4">call <Link href='0800724635' className='text-dark'>0800724635</Link> </p>toll free</button>
             </div> 
             <div className='col-4 text-center mt-5 '> 
               <button className='btn btn-secondary p-4'><p className='h4'><Link to="/report" className='text-dark'>Get Help</Link></p> </button>
               </div>    
-        </div>
         </div>
         <div className='d-flex justify-content-center'>
         <div  className='m-2 row p-5' style={{width:'100rem'}}>
@@ -73,7 +70,7 @@ const Home = () => {
 
         <div class="position-relative  bg-info " id='test'>
         <div className='text-center mt-5 row bg-primary'>
-        <div className="card text-white">
+        <div className="card text-dark">
             <div className="card-img-overlay">
               <h5 className="card-title">Any help is appreciated!</h5>
               <p className="card-text">You can  donate to support our work.</p>
