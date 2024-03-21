@@ -1,22 +1,22 @@
-const express = require('express');
-const router = express.Router();
 const asyncErrorHandler = require('../Utils/asyncErrorHandler');
 const VictimCase = require('../Models/victimCaseModel');
-const WitnessCase = require('../Models/witnessCaseModel')
+const WitnessCase = require('../Models/witnessCaseModel');
 
-// Endpoint to add victims case
-exports.victimCaseEndpoint= asyncErrorHandler (async (req, res) => {
+exports.victimCaseEndpoint = asyncErrorHandler(async (req, res) => {
   try {
-    const { abuserName, typeOfAbuse, location, storyText, storyVideo, storyAudio, mediaEvidence } = req.body;
+    const { userName, abuserName, typeOfAbuse, location, storyText } = req.body;
+
+    const mediaEvidenceFiles = req.files || [];
+    const mediaEvidencePaths = mediaEvidenceFiles.map(file => file.path);
 
     const victimCase = await VictimCase.create({
+      userName,
       abuserName,
       typeOfAbuse,
       location,
       storyText,
-      storyVideo,
-      storyAudio,
-      mediaEvidence
+      mediaEvidence: mediaEvidencePaths,
+      reportedAt: currentTime.toISOString(), 
     });
 
     console.log(victimCase);
@@ -39,10 +39,12 @@ exports.victimCaseEndpoint= asyncErrorHandler (async (req, res) => {
   }
 });
 
-// Endpoint to add victim report
-exports.witnessCaseEndpoint= asyncErrorHandler (async (req, res) => {
+exports.witnessCaseEndpoint = asyncErrorHandler(async (req, res) => {
   try {
-    const { victimName, abuserName, location, typeOfAbuse, urgency, backgroundStory, backgroundAudio, mediaEvidence } = req.body;
+    const { victimName, abuserName, location, typeOfAbuse, urgency, backgroundStory } = req.body;
+
+    const mediaEvidenceFiles = req.files || [];
+    const mediaEvidencePaths = mediaEvidenceFiles.map(file => file.path);
 
     const witnessCase = await WitnessCase.create({
       victimName,
@@ -51,8 +53,8 @@ exports.witnessCaseEndpoint= asyncErrorHandler (async (req, res) => {
       typeOfAbuse,
       urgency,
       backgroundStory,
-      backgroundAudio,
-      mediaEvidence
+      mediaEvidence: mediaEvidencePaths,
+      reportedAt: currentTime.toISOString(), 
     });
 
     console.log(witnessCase);
@@ -74,3 +76,41 @@ exports.witnessCaseEndpoint= asyncErrorHandler (async (req, res) => {
     });
   }
 });
+
+exports.viewVictimCases = async(req, res) => {
+  try{
+    const victimCases = await VictimCase.find();
+
+    res.status(200).json({
+      status:'success',
+      casesCount: victimCases.length,
+      data:{
+        victimCases,
+      }
+    })
+  }catch(error){
+    res.status(404).json({
+      status:'Fail',
+      message: `An error occurred while trying to fetch victim cases ` + error.message,
+  })
+}
+}
+
+exports.viewWitnessCases = async(req, res) =>{
+  try{
+    const witnessCases = await WitnessCase.find();
+
+    res.status(200).json({
+      status:'success',
+      casesCount: witnessCases.length,
+      data:{
+        witnessCases,
+      }
+    })
+  }catch(error){
+    res.status(404).json({
+      status:'Fail',
+      message: `An error occurred while trying to fetch witness cases ` + error.message,
+  })
+}
+}

@@ -17,15 +17,10 @@ const victimCaseSchema = new mongoose.Schema({
         type: String,
         // required: true
       },
-      storyVideo: {
-        type: String  // Assuming storing video URLs
+      mediaEvidence: [String],
+      reportedAt: {
+        type: Date,
       },
-      storyAudio: {
-        type: String  // Assuming storing audio URLs
-      },
-      mediaEvidence: {
-        type: String  // Assuming storing document or media file URLs
-      }
     });
     
     const VictimCase = mongoose.model('Victim_Case', victimCaseSchema);

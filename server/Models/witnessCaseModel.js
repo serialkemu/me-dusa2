@@ -26,12 +26,10 @@ const witnessCaseSchema = new mongoose.Schema({
   backgroundStory: {
     type: String  // Assuming storing background story as text
   },
-  backgroundAudio: {
-    type: String  // Assuming storing background audio URL if available
+  mediaEvidence: [String],
+  reportedAt: {
+    type: Date,
   },
-  mediaEvidence: {
-    type: String  // Assuming storing document or media file URLs
-  }
 });
 
 const WitnessCase = mongoose.model('Witness_Case', witnessCaseSchema);
