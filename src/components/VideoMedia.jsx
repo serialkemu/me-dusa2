@@ -41,23 +41,23 @@ const VideoMedia = ({ onSave }) => {
   };
 
   return (
-    <div className='video-container'>
+    <div className='video-container m-2'>
       <div>You can record a video real quick</div>
       <div className='video-wrapper'>
         <video ref={videoRef} style={{ width: '300px' }} muted></video>
       </div>
-      <div className='button-container'>
+      <div className='button-container gap-2 p-3'>
         {isRecording ? (
-          <button onClick={stopRecording} className='btn btn-info'>Stop Recording</button>
+          <button onClick={stopRecording} className='btn btn-secondary'>Stop Recording</button>
         ) : (
           <>
-            <button onClick={startRecording} className='btn btn-info'>Start Recording</button>
+            <button onClick={startRecording} className='btn btn-secondary'>Start Recording</button>
             {recordedChunks.length > 0 && (
-              <button onClick={handlePreview} className='btn btn-primary'>Preview</button>
+              <button onClick={handlePreview} className='btn btn-secondary'>Preview</button>
             )}
           </>
         )}
-        <button onClick={handleSave} disabled={recordedChunks.length === 0} className='btn btn-success'>Save Recording</button>
+        <button onClick={handleSave} disabled={recordedChunks.length === 0} className='btn btn-info'>Save Recording</button>
       </div>
     </div>
   );
